@@ -26,11 +26,20 @@ const generatingSteps = [
     'Generating brief...',
 ]
 
+const defaultData = {
+    volume: '847 posts/month',
+    engagement: '4.2%',
+    delta: '+12%',
+    format: 'Reels',
+    hook: '"Before/After transformations"',
+    gaps: ['User-generated content series', 'Micro-influencer collabs', 'Educational long-form'],
+}
+
 export default function InteractiveSlackCard() {
     const [state, setState] = useState<State>('idle')
     const [inputVal, setInputVal] = useState('')
     const [brand, setBrand] = useState('Nike')
-    const [data, setData] = useState(mockData('Nike'))
+    const [data, setData] = useState(defaultData)
     const [progress, setProgress] = useState(0)
     const [generatingText, setGeneratingText] = useState('Scraping platforms...')
 
