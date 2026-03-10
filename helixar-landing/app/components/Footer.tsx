@@ -1,49 +1,135 @@
+"use client";
+
 export default function Footer() {
+    const columns = [
+        {
+            header: "PRODUCT",
+            links: ["Features", "Pricing", "Changelog", "Add to Slack"],
+        },
+        { header: "COMPANY", links: ["About", "Careers", "Blog", "Contact"] },
+        { header: "LEGAL", links: ["Privacy", "Terms", "Security"] },
+    ];
+
     return (
-        <footer className="footer">
-            <div className="footer-inner">
-                <div>
-                    <div className="footer-logo">
-                        <span className="nav-logo-mark">H</span>
-                        Helixar
+        <footer
+            style={{
+                background: "var(--bg-dark)",
+                borderTop: "1px solid rgba(255,255,255,0.06)",
+            }}
+        >
+            <div
+                style={{
+                    maxWidth: "var(--max-width)",
+                    margin: "0 auto",
+                    padding: "64px var(--content-pad) 48px",
+                }}
+            >
+                <div
+                    style={{
+                        display: "grid",
+                        gridTemplateColumns: "2fr 1fr 1fr 1fr",
+                        gap: 48,
+                    }}
+                >
+                    {/* Brand */}
+                    <div>
+                        <div
+                            style={{
+                                fontFamily: "var(--font-ui)",
+                                fontSize: 16,
+                                fontWeight: 700,
+                                color: "var(--text-inverse)",
+                                display: "flex",
+                                alignItems: "center",
+                                gap: 4,
+                            }}
+                        >
+                            <span style={{ color: "var(--orange)" }}>■</span>{" "}
+                            HELIXAR
+                        </div>
+                        <p
+                            style={{
+                                marginTop: 12,
+                                fontFamily: "var(--font-ui)",
+                                fontSize: 14,
+                                color: "var(--text-inverse-body)",
+                                lineHeight: 1.6,
+                            }}
+                        >
+                            Built for marketers who refuse to settle.
+                        </p>
                     </div>
-                    <div className="footer-tagline">
-                        The AI workspace for marketers who want to operate like a team — without building one.
-                    </div>
+
+                    {/* Link columns */}
+                    {columns.map((col) => (
+                        <div key={col.header}>
+                            <div
+                                style={{
+                                    fontFamily: "var(--font-mono)",
+                                    fontSize: 10,
+                                    textTransform: "uppercase",
+                                    letterSpacing: "0.1em",
+                                    color: "var(--text-muted)",
+                                    marginBottom: 16,
+                                }}
+                            >
+                                {col.header}
+                            </div>
+                            {col.links.map((link) => (
+                                <a
+                                    key={link}
+                                    href="#"
+                                    style={{
+                                        display: "block",
+                                        fontFamily: "var(--font-ui)",
+                                        fontSize: 14,
+                                        color: "var(--text-inverse-body)",
+                                        lineHeight: 2.2,
+                                    }}
+                                    onMouseEnter={(e) =>
+                                    (e.currentTarget.style.color =
+                                        "var(--text-inverse)")
+                                    }
+                                    onMouseLeave={(e) =>
+                                    (e.currentTarget.style.color =
+                                        "var(--text-inverse-body)")
+                                    }
+                                >
+                                    {link}
+                                </a>
+                            ))}
+                        </div>
+                    ))}
                 </div>
 
-                <div>
-                    <div className="footer-column-title">Product</div>
-                    <a href="#features" className="footer-link">Features</a>
-                    <a href="#" className="footer-link">Pricing</a>
-                    <a href="#" className="footer-link">Changelog</a>
-                    <a href="#download" className="footer-link">Download</a>
+                {/* Bottom bar */}
+                <div
+                    style={{
+                        marginTop: 48,
+                        paddingTop: 24,
+                        borderTop: "1px solid rgba(255,255,255,0.06)",
+                        display: "flex",
+                        justifyContent: "space-between",
+                        alignItems: "center",
+                    }}
+                >
+                    <span
+                        style={{
+                            fontFamily: "var(--font-ui)",
+                            fontSize: 12,
+                            color: "var(--text-muted)",
+                        }}
+                    >
+                        © 2025 Helixar. All rights reserved.
+                    </span>
+                    <div
+                        style={{
+                            width: 16,
+                            height: 16,
+                            background: "var(--orange)",
+                        }}
+                    />
                 </div>
-
-                <div>
-                    <div className="footer-column-title">Resources</div>
-                    <a href="#" className="footer-link">Documentation</a>
-                    <a href="#" className="footer-link">Blog</a>
-                    <a href="#" className="footer-link">Community</a>
-                    <a href="#" className="footer-link">Support</a>
-                </div>
-
-                <div>
-                    <div className="footer-column-title">Company</div>
-                    <a href="#" className="footer-link">About</a>
-                    <a href="#" className="footer-link">Careers</a>
-                    <a href="#" className="footer-link">Privacy</a>
-                    <a href="#" className="footer-link">Terms</a>
-                </div>
-            </div>
-
-            <div className="footer-bottom">
-                <span className="footer-copyright">
-                    &copy; 2025 Helixar. All rights reserved.
-                </span>
-                <span className="footer-copyright">
-                    Built for marketers who refuse to settle.
-                </span>
             </div>
         </footer>
     );

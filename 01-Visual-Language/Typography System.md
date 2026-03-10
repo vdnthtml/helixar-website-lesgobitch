@@ -1,93 +1,145 @@
-# Typography System — Helixar
+# Typography System v2 — Helixar
+# UPDATED: Swiss Brutalist Editorial
 
 ---
 
-## Font Stack
+## Philosophy v2
 
-### Display / Headlines — Geist
-Used for: Hero headlines, section titles, feature names
-Why: Sharp, modern, technical. Feels like it belongs in a developer tool — without being cold.
-Source: https://vercel.com/font (free, from Vercel)
+The old type system was clean and functional. This system is editorial and dominant.
+
+Reference: Image 2 (Catch Conference) and Image 5 (Mondrama).
+The type IS the design. Headlines break grids. Sizing is extreme.
+The ratio between the largest and smallest text is violent — that's intentional.
+
+---
+
+## Font Stack (Updated)
+
+### Display — Bebas Neue OR Geist (weight 800+)
+For hero headlines and section dominance.
+
+Bebas Neue is the brutalist Swiss reference — pure condensed caps that fill space.
+If Bebas Neue is unavailable, use Geist at weight 900 with tight tracking.
+
+```css
+font-family: 'Bebas Neue', 'Geist', system-ui, sans-serif;
+/* For hero headline only */
+```
+
+### Body + UI — Geist
+All body copy, labels, navigation, UI elements.
 
 ```css
 font-family: 'Geist', system-ui, sans-serif;
 ```
 
-### Body — Geist (Regular weight)
-The same family carries body for consistency. Different weight = different register.
-
 ### Monospace — Geist Mono
-Used for: Code snippets, data outputs, metrics, platform handles, file paths
-Why: Makes data feel precise. Reinforces the "workspace" mental model.
+Data, metrics, step numbers, file paths, ticket-style labels.
+The Mondrama reference (Image 5) uses monospace for the "boarding pass" aesthetic.
 
 ```css
-font-family: 'Geist Mono', 'Fira Code', monospace;
+font-family: 'Geist Mono', monospace;
 ```
 
 ---
 
-## Type Scale
+## Type Scale (Updated — More Violent Contrast)
 
 ```
---text-xs:    11px / 1.4 / tracking +0.04em  → Metadata, badges, timestamps
---text-sm:    13px / 1.5 / tracking +0.01em  → Secondary labels, captions
---text-base:  15px / 1.6 / tracking 0         → Body copy, descriptions
---text-md:    17px / 1.5 / tracking -0.01em  → Feature intros, lead text
---text-lg:    21px / 1.4 / tracking -0.02em  → Section subtitles
---text-xl:    28px / 1.3 / tracking -0.03em  → Section headlines
---text-2xl:   36px / 1.2 / tracking -0.03em  → Page titles
---text-3xl:   48px / 1.15/ tracking -0.04em  → Hero subhead
---text-4xl:   64px / 1.05/ tracking -0.05em  → Hero headline
---text-5xl:   80px / 1.0 / tracking -0.06em  → Hero — desktop only, max size
+--text-xs:    11px  → Metadata, ticket labels, step numbers
+--text-sm:    13px  → Secondary labels
+--text-base:  15px  → Body copy
+--text-md:    17px  → Feature intros
+--text-lg:    21px  → Section subtitles
+--text-xl:    28px  → Section headlines (Geist 700)
+--text-2xl:   40px  → Page titles (Geist 800)
+--text-3xl:   56px  → Hero subhead (Geist 800)
+--text-4xl:   80px  → Hero headline (Geist 800 or Bebas Neue)
+--text-5xl:  120px  → BRUTALIST HERO — fills the viewport width
+--text-6xl:  160px+ → EDITORIAL BREAK — single word, bleeds off screen
+```
+
+text-5xl and text-6xl are the new additions. These are used for:
+- The hero headline breaking the grid
+- Section words used as background texture (opacity 0.04)
+- The "stamp" word that bleeds off the right edge
+
+---
+
+## The Brutalist Type Rules
+
+### Rule 1: The Hero Breaks the Grid
+The hero headline must be large enough that it clips the viewport edges on mobile.
+On desktop: fills 100% of the content width.
+No max-width on the hero headline. It goes to the edge.
+
+### Rule 2: Condensed Caps for Impact
+Hero headline: ALL CAPS when using Bebas Neue.
+Section headlines: Title case when using Geist.
+Never all-caps for body. Never all-caps for anything under 32px.
+
+### Rule 3: The Ticket Label
+Borrowed from Image 5 (Mondrama boarding pass aesthetic).
+Used for: step numbers, section codes, data labels.
+
+```css
+.ticket-label {
+  font-family: 'Geist Mono', monospace;
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-tertiary);
+  border: 1px solid var(--color-border-default);
+  padding: 3px 8px;
+  display: inline-block;
+}
+```
+
+Used on: loop steps (01 / 02 / 03 / 04), section codes, data row labels.
+
+### Rule 4: The Background Word
+Large text used at 4% opacity as a background texture element.
+Like a watermark but intentional and designed.
+
+```css
+.bg-word {
+  font-size: clamp(120px, 20vw, 200px);
+  font-weight: 900;
+  color: var(--color-text-primary);
+  opacity: 0.03;
+  position: absolute;
+  pointer-events: none;
+  user-select: none;
+  white-space: nowrap;
+  letter-spacing: -0.04em;
+}
+```
+
+Used in: hero section background ("HELIXAR"), features section ("RESEARCH", "ANALYZE")
+
+### Rule 5: The Orange Word
+One word in a headline gets the orange stamp treatment.
+Not italic. Not bold. The orange background block IS the emphasis.
+
+```html
+<h1>
+  Marketing used to need a team.
+  Now it needs <span class="stamp">you.</span>
+</h1>
 ```
 
 ---
 
-## Font Weights
+## Hierarchy Reference
 
 ```
-300 — Light      → Use sparingly. Large display text only.
-400 — Regular    → Body copy, secondary labels.
-500 — Medium     → UI labels, navigation items.
-600 — Semibold   → Feature names, section titles.
-700 — Bold       → Section headlines, strong emphasis.
-800 — Extrabold  → Hero headline only.
+HERO HEADLINE:      Bebas Neue / 80–120px / caps / #F0EBE3
+HERO SUBHEAD:       Geist 400 / 18px / #8A8178 / max-width 480px
+SECTION EYEBROW:    Geist Mono / 11px / uppercase / ticket-label style
+SECTION HEADLINE:   Geist 700 / 40–56px / #F0EBE3 / tracking -0.03em
+FEATURE HEADLINE:   Geist 700 / 32–40px / #F0EBE3 / left-aligned
+BODY:               Geist 400 / 15–16px / #8A8178 / max-width 560px
+DATA/METRIC:        Geist Mono 700 / varies / #F0EBE3
+TICKET LABEL:       Geist Mono 400 / 11px / #514D48 / bordered
 ```
-
-**Rule:** Never use 800 weight at sizes below 40px. It reads as shouting.
-
----
-
-## Hierarchy in Practice
-
-### Landing Page Hero
-```
-Eyebrow:   text-sm / 500 / text-brand / tracking +0.1em / UPPERCASE
-Headline:  text-5xl / 800 / text-primary / tracking -0.06em
-Subhead:   text-xl / 400 / text-secondary / tracking -0.02em
-CTA label: text-base / 600 / text-inverse (on orange button)
-```
-
-### In-App Section Header
-```
-Section title:  text-xl / 700 / text-primary
-Description:    text-base / 400 / text-secondary
-```
-
-### Data / Metrics
-```
-Number:     text-2xl / 700 / text-primary / Geist Mono
-Label:      text-xs / 500 / text-tertiary / tracking +0.06em / UPPERCASE
-Delta:      text-sm / 600 / color-success or color-error
-```
-
----
-
-## Rules
-
-1. **One typeface family.** Geist does everything. Don't introduce a second face.
-2. **Hierarchy through weight and size — not color.** Color is for state, not level.
-3. **Negative tracking on large text. Always.** Geist at 64px without -0.05em tracking looks amateur.
-4. **Line length cap: 72 characters.** Beyond that, readability degrades. Enforce with `max-width`.
-5. **Uppercase is for labels only.** Eyebrows, metadata, tab labels. Never headlines, never body.
-6. **Monospace for anything that is data.** Numbers, handles, file names, API keys, metrics.

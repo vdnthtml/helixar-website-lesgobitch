@@ -1,14 +1,12 @@
 import Nav from "./components/Nav";
 import Hero from "./components/Hero";
-import SocialProof from "./components/SocialProof";
-import TheLoop from "./components/TheLoop";
-import PainPoints from "./components/PainPoints";
-import FeaturesGrid from "./components/FeaturesGrid";
+import Marquee from "./components/Marquee";
+import HowItWorks from "./components/HowItWorks";
+import TheMath from "./components/TheMath";
 import Testimonials from "./components/Testimonials";
-import CompoundAdvantage from "./components/CompoundAdvantage";
+import Pricing from "./components/Pricing";
 import FinalCTA from "./components/FinalCTA";
 import Footer from "./components/Footer";
-import Animations from "./components/Animations";
 
 export default function Home() {
   return (
@@ -16,16 +14,14 @@ export default function Home() {
       <Nav />
       <main>
         <Hero />
-        <SocialProof />
-        <TheLoop />
-        <PainPoints />
-        <FeaturesGrid />
+        <Marquee />
+        <HowItWorks />
+        <TheMath />
         <Testimonials />
-        <CompoundAdvantage />
+        <Pricing />
         <FinalCTA />
       </main>
       <Footer />
-      <Animations />
     </>
   );
 }

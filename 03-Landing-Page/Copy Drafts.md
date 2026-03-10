@@ -1,219 +1,231 @@
-# Copy Drafts — Helixar Landing Page
+# Copy Drafts v4 — Helixar
+# Show the product. Show the workflow. Make it obvious in 3 seconds.
 
 ---
 
-## Hero Section
+## THE CORE PROBLEM WITH v3
 
-**Eyebrow:**
-`AI MARKETING WORKSPACE`
-
-**Headline Option A (Recommended):**
-```
-Marketing used to
-need a team.
-Now it needs you.
-```
-
-**Headline Option B:**
-```
-The whole marketing team.
-None of the overhead.
-```
-
-**Headline Option C (Most Bold):**
-```
-You think.
-Helixar does.
-```
-
-**Subhead (paired with Option A):**
-```
-Helixar researches competitors, plans campaigns, generates content,
-and tracks performance — all in one workspace that gets smarter
-every time you use it.
-```
-
-**CTAs:**
-- Primary: `Download for Mac`
-- Secondary: `See how it works →`
+Someone reads the page and thinks "ok sounds cool" but can't explain what it does.
+That means we failed. Fix: show the actual product working. Every section demonstrates
+a real workflow. Copy is specific, not inspirational. Numbers are real. Outputs are visible.
 
 ---
 
-## Social Proof Bar
+## NAV
 
-```
-Used by marketers, founders, and agencies at —
-```
-(Follow with company logos or company type text if no logos yet)
-
----
-
-## The Loop Section
-
-**Headline:**
-```
-One loop. Every campaign.
-```
-
-**Subhead:**
-```
-Research. Analyze. Generate. Track.
-And every cycle makes the next one smarter.
-```
-
-**Step Descriptions:**
-
-RESEARCH
-```
-Pull competitor data from YouTube, Instagram, TikTok, X, LinkedIn,
-and Facebook — simultaneously. What used to take a week takes minutes.
-```
-
-ANALYZE
-```
-Get scored, ranked recommendations backed by real platform data —
-not gut instinct or generic templates.
-```
-
-GENERATE
-```
-Content variants with reasoning. A/B tests with hypotheses.
-Each piece informed by what's worked before.
-```
-
-TRACK
-```
-Monitor performance, flag issues before they become problems,
-and get AI recommendations on what to change.
-```
+Logo: ■ HELIXAR
+Links: How it works · Pricing · Changelog
+CTA: Add to Slack — Free
 
 ---
 
-## Pain Points Section
+## HERO
 
-**Headline:**
-```
-Who made marketing so hard?
-```
+The hero has ONE job: show what Helixar does in one sentence, then prove it instantly.
 
-**Solopreneur Card:**
-```
-You know your product inside out.
-Marketing? That's a different language.
+Eyebrow: SLACK-NATIVE AI FOR MARKETING TEAMS
 
-Helixar speaks it for you.
-```
+Headline (Bebas Neue, huge):
+TYPE A COMMAND.
+GET A
+[COMPETITOR BRIEF.]  ← orange stamp
 
-**Agency Founder Card:**
-```
-Every new client means more hires.
-More hires means more risk.
+Subhead (specific, not inspirational):
+"@helixar report Nike — and in 4 minutes you get a full competitor brief:
+top content, engagement rates, trending formats, and a gap analysis.
+All inside Slack. No tabs. No tools. No briefing docs."
 
-Helixar is the team that scales without the headcount.
-```
-
-**Team Lead Card:**
-```
-You spend more time briefing and reviewing
-than actually thinking.
-
-Helixar collapses the loop. You stay in control.
-```
+CTA: Add to Slack — Free 14 days  [Slack icon]
+Secondary: Watch it work (60 sec) →
 
 ---
 
-## Features Section
+## HERO VISUAL — THE SLACK THREAD MOCKUP
 
-**Headline:**
-```
-Everything runs. You direct.
-```
+NOT a MacBook. NOT a laptop. NOT an abstract 3D object.
 
-**Feature Card Copy:**
+Show a real Slack conversation. This is the product. This is what people buy.
 
-1. Competitor Research
-```
-Stop spending 10 hours pulling competitor data.
-Helixar scrapes every major platform simultaneously — YouTube,
-Instagram, TikTok, X, LinkedIn, Facebook — and saves everything
-to your workspace automatically.
-```
+Design as a floating Slack-style UI panel (dark, Slack-like, rounded):
 
-2. AI Memory
-```
-Most AI forgets when you close the tab.
-Helixar remembers every client, every campaign, every decision.
-New team member? They're up to speed in minutes.
-```
+  ┌─────────────────────────────────────────────────────┐
+  │  # marketing-intel                                  │
+  │                                                     │
+  │  You  10:03 AM                                      │
+  │  @helixar report Nike                               │
+  │                                                     │
+  │  🤖 Helixar  10:07 AM                               │
+  │  ──────────────────────────────────                 │
+  │  Nike Competitor Brief · Generated 10:07 AM         │
+  │                                                     │
+  │  📊 Content Volume: 847 posts / month               │
+  │  📈 Avg Engagement: 4.2% (↑ 12% vs last month)     │
+  │  🔥 Top Format: Reels (63% of high performers)      │
+  │  🎯 Winning Hook: "Before/After transformations"    │
+  │                                                     │
+  │  Top 3 content gaps vs your brand:                  │
+  │  1. Behind-the-scenes production content            │
+  │  2. Creator collaborations under 100K followers     │
+  │  3. Morning routine integrations                    │
+  │                                                     │
+  │  [View Full Brief ↗]  [Monitor Nike]  [Export]      │
+  └─────────────────────────────────────────────────────┘
 
-3. Strategy Analysis
-```
-Not a gut feeling. Not a template.
-A scored, ranked action plan built from your actual competitor data —
-with estimated ROI per recommendation.
-```
+This floats. Slight rotation. Orange glow behind it. That's the hero.
+The product is Slack. Show Slack. Make it obvious.
 
-4. Campaign Management
-```
-Draft to live, tracked in one place.
-Nothing deploys without your approval.
-Everything has an audit trail.
-```
-
-5. A/B Testing
-```
-Tests with hypotheses. Not random experiments.
-Every result gets stored. Every future test gets smarter.
-```
-
-6. Content Generation
-```
-Not 10 generic captions.
-10 strategically different variants — each with a reason
-it might outperform the others.
-```
+Below the mockup:
+  Small trust line: "Works in any Slack workspace. Setup takes 2 minutes."
 
 ---
 
-## Compound Advantage Section
+## HOW IT WORKS (replaces "The Loop")
 
-**Headline:**
-```
-It gets smarter every time.
-```
+Title: HOW IT WORKS
 
-**Body:**
-```
-Every research session adds to Helixar's memory.
-Every campaign teaches it what works for your clients.
-Every A/B test becomes context for the next one.
+Not 4 abstract steps. 3 specific commands with real outputs.
 
-After 30 days, Helixar knows your market better than most analysts.
-After 90 days, it's irreplaceable.
+COMMAND 1:
+  You type: @helixar report [brand]
+  You get: Full competitor analysis in under 5 minutes. Content volume,
+  engagement rates, top formats, trending topics, and a gap analysis
+  vs your brand. Pulled from YouTube, Instagram, TikTok, X, LinkedIn.
 
-That's the compound advantage.
-```
+  Visual: The Slack message showing the Nike brief output (same as hero)
+
+COMMAND 2:
+  You type: @helixar monitor Nike
+  You get: Weekly Slack digest every Monday. New campaigns, viral posts,
+  follower changes, ad spend signals. You stop checking manually.
+  Helixar watches so you don't have to.
+
+  Visual: A Slack "weekly digest" message mockup showing a brief summary
+
+COMMAND 3:
+  You type: @helixar what do we know about Lululemon?
+  You get: Everything Helixar has learned since you started monitoring —
+  every report, every digest, every trend. It remembers. You don't have to.
+
+  Visual: A Slack message showing recalled context with timestamps
 
 ---
 
-## Final CTA Section
+## PROBLEM SECTION
 
-**Headline:**
-```
-Your whole marketing operation.
-Starts today.
-```
+Kill the "WHO MADE MARKETING SO HARD?" treatment. Too abstract.
 
-**Subhead:**
-```
-Available for Mac and Windows.
-```
+Replace with something that shows the before state specifically:
 
-**CTAs:**
-- `Download for Mac`
-- `Download for Windows`
+Headline: THE OLD WAY IS KILLING YOUR MORNINGS.
 
-**Under CTAs:**
-```
-Free to start. No credit card required.
-```
+Three columns — each shows a real workflow pain with a specific scenario:
+
+MONDAY MORNING, 9AM
+"Open Sprout Social. Download CSV. Open Google Sheets. Paste data.
+Open ChatGPT. Write prompt. Copy output. Open Notion. Format report.
+Send to client. 3 hours gone. Every week."
+→ With Helixar: @helixar report [brand] · Done in 4 minutes.
+
+CLIENT ASKS "WHAT ARE COMPETITORS DOING?"
+"You don't have time to research. You give a vague answer.
+You feel bad about it. You spend the weekend catching up.
+You miss the brief. The client noticed."
+→ With Helixar: You answer on the spot. Helixar already knows.
+
+YOUR TEAM USES 5 AI TOOLS
+"ChatGPT for writing. Sprout for listening. SEMrush for SEO.
+Notion for storing. Slack for sharing. None of them talk.
+You're the middleware. You're exhausted."
+→ With Helixar: One command. One place. One memory.
+
+---
+
+## FEATURES — SHOW THE OUTPUTS, NOT THE FEATURES
+
+Kill the alternating panel/copy format. Show actual screenshots/mockups of the output.
+
+Feature 1: COMPETITOR REPORTS
+Headline: "A full brief in the time it takes to make coffee."
+Visual: The Slack competitor brief mockup (Nike example)
+Stats below visual: 847 posts analyzed · 6 platforms · 4 min avg
+
+Feature 2: WEEKLY DIGESTS
+Headline: "Monday morning, already done."
+Visual: Slack weekly digest mockup showing "Nike Weekly — Mar 10"
+  with bullet summary of new activity
+Stats: Sent every Monday · 8am your timezone · Auto to your channel
+
+Feature 3: AI MEMORY
+Headline: "It remembers everything. You remember nothing."
+Visual: Slack thread showing @helixar what do we know about Nike?
+  with a rich contextual reply showing 3 months of data
+Stats: 3,241 entries · 12 brands monitored · Gets smarter weekly
+
+---
+
+## SOCIAL PROOF — SPECIFIC RESULTS, NOT VIBES
+
+Kill the generic testimonials. Replace with outcome-first quotes.
+
+Format: Result headline → Quote → Person
+
+"3 hours → 4 minutes per competitor report."
+"I used to spend Monday mornings building competitor reports.
+Now I type one command and have a full brief before my first call.
+That time went straight into client strategy."
+— Sarah Chen, Head of Marketing, Arch Software
+
+"Won a pitch because of a Helixar brief."
+"Client asked what their top competitor was doing on TikTok.
+I had the data. They didn't. We got the contract."
+— Marcus Webb, Freelance Brand Strategist
+
+"My team stopped using 3 other tools."
+"We cancelled Sprout Social, Brand24, and our ChatGPT Plus subscriptions.
+Helixar does more than all three combined, inside Slack where we already live."
+— Priya Nair, Growth Lead, Fountain
+
+---
+
+## PRICING (inline on homepage, links to /pricing)
+
+Headline: SIMPLE. TWO OPTIONS.
+
+STARTER — $20/mo (billed yearly) / $29/mo
+For freelancers and small teams.
+1 Slack workspace · 3 reports/month · 2 monitored brands · Basic memory
+CTA: Start Free — 14 days, no card
+
+PRO — most popular
+For agencies and marketing teams.
+3 workspaces · Unlimited reports · 10 monitored brands · Full AI memory · Priority support
+CTA: Start Free — 14 days, no card
+
+ENTERPRISE — custom
+Forward-deployed setup · Custom training · Dedicated channel · SOC 2 · SLA
+CTA: Talk to us
+
+Trust: "No contracts. Cancel anytime. 14-day free trial on all plans."
+
+---
+
+## FINAL CTA
+
+Headline:
+STOP RESEARCHING.
+START [KNOWING.]  ← orange stamp
+
+Subhead (specific):
+"Add Helixar to your Slack workspace. Type @helixar report [your competitor].
+See what it finds in 4 minutes."
+
+Primary CTA: Add to Slack — Free 14 days  [Slack icon]
+Secondary: Book a 15-min demo
+
+Below: "2,400+ marketing teams already use Helixar. Setup takes 2 minutes."
+
+---
+
+## FOOTER
+
+Same as v3 — dark footer, orange stamp block bottom right.

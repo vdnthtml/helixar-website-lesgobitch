@@ -1,117 +1,137 @@
-# Color System — Helixar
+# Color System v3 — Helixar
+# Light Brutalist — Warm Off-White Base, Near-Black Type, Orange Only
 
 ---
 
-## Philosophy
+## The Pivot
 
-Color at Helixar is not decoration. It is a communication system.
+v1: Cold near-black Linear clone.
+v2: Warm AMOLED dark with orange stamp.
+v3: LIGHT BRUTALIST.
 
-The dark background creates focus. The orange creates urgency. Everything else creates hierarchy.
+Why light? Enterprise buyers trust light. Orange hits harder without dark competition.
+Every AI tool launched in the past 18 months is dark. We go the other direction.
+
+The reference: premium printed matter — a well-designed annual report, a Swiss poster,
+a high-end magazine. These are light. They command attention through type weight
+and negative space, not through darkness.
 
 ---
 
 ## Core Palette
 
-### Backgrounds (The Layers)
+### Backgrounds (Light, warm off-white — never pure white)
 
 ```
---color-bg-base:       #0A0A0B   /* The void. True base. Almost black. */
---color-bg-surface:    #111113   /* Cards, panels. Slightly lifted. */
---color-bg-elevated:   #1A1A1E   /* Modals, dropdowns. Visibly elevated. */
---color-bg-overlay:    #222228   /* Hover states on surfaces. */
+--color-bg-base:        #F5F2EE   /* Warm off-white — page background */
+--color-bg-alternate:   #EDEBE8   /* Slightly darker — alternating sections */
+--color-bg-card:        #FAFAF8   /* Cards, elevated surfaces */
+--color-bg-paper-dark:  #E0DAD5   /* Borders, section dividers, inputs */
+--color-bg-invert:      #1A1916   /* Near-black — footer ONLY */
 ```
 
-Each layer is distinct but subtle. Users shouldn't consciously notice the difference — they should just feel that some things are "above" others.
+Never use #FFFFFF. Never use #000000. Always the warm variants.
 
----
-
-### Brand — Orange
+### Brand Orange (unchanged — orange hits harder on light)
 
 ```
---color-brand:         #FF5C00   /* Primary orange. Helixar identity. */
---color-brand-hover:   #FF7A2E   /* Hover state. Warmer, slightly lighter. */
---color-brand-muted:   #FF5C0020 /* 12% opacity. Used for glow, bg tints. */
---color-brand-glow:    #FF5C0040 /* 25% opacity. Used under active CTAs. */
+--color-brand:          #FF5E2C   /* The only color on the page */
+--color-brand-hover:    #FF7A45
+--color-brand-muted:    rgba(255, 94, 44, 0.10)
+--color-brand-glow:     rgba(255, 94, 44, 0.18)
+--color-brand-bg:       #FFE8E0   /* Very light orange tint — for muted badges */
 ```
 
-**Rule:** Orange is used ONLY for:
-1. Primary CTAs ("Get Started", "Download", "Deploy")
-2. Active/selected states
-3. Progress indicators
-4. The logo
+Orange is still used as a stamp/block AND as a UI accent. Same rules as v2.
+The difference: on light, orange is MORE dominant. It needs to be used more sparingly.
+Orange in 10% of UI space reads perfectly. Used more than that, it becomes garish.
 
-If you find yourself using orange for a third thing on the same screen — you're diluting it.
-
----
-
-### Text
+### Text (Near-black, warm — never pure black)
 
 ```
---color-text-primary:   #F2F2F3   /* Headlines, labels. Near-white. */
---color-text-secondary: #8A8A96   /* Body copy, descriptions. Muted. */
---color-text-tertiary:  #52525C   /* Placeholders, metadata. Quiet. */
---color-text-disabled:  #3A3A44   /* Disabled states. Almost invisible. */
---color-text-inverse:   #0A0A0B   /* Text on orange backgrounds. */
+--color-text-primary:   #1A1916   /* Near-black, warm — headlines, strong UI */
+--color-text-secondary: #424249   /* Mid-dark — subheads, nav links */
+--color-text-body:      #6B6B72   /* Reading copy */
+--color-text-muted:     #999690   /* Captions, labels, secondary data */
+--color-text-placeholder: #C8C4BF
 ```
 
----
-
-### Borders & Lines
+### Borders (Hairline precision)
 
 ```
---color-border-subtle:  #1E1E24   /* Between sections. Barely visible. */
---color-border-default: #2A2A34   /* Card borders, input borders. */
---color-border-strong:  #3A3A48   /* Focus rings, active component borders. */
+--color-border-hairline: #E8E4DF  /* Thinnest visible — section separators */
+--color-border-default:  #E0DAD5  /* Standard borders */
+--color-border-strong:   #C8C4BF  /* Emphasis borders */
 ```
 
 ---
 
-### Semantic Colors
+## The Orange Stamp Pattern (Unchanged from v2 — works even better on light)
 
-```
---color-success:        #22C55E   /* Green. Campaigns live, tests passed. */
---color-success-muted:  #22C55E15
---color-warning:        #F59E0B   /* Amber. Budget threshold, slow metrics. */
---color-warning-muted:  #F59E0B15
---color-error:          #EF4444   /* Red. Errors, failed states. */
---color-error-muted:    #EF444415
---color-info:           #3B82F6   /* Blue. Informational only. */
---color-info-muted:     #3B82F615
-```
-
----
-
-## Usage Rules
-
-### The 60 / 30 / 10 Rule
-- **60%** — Background layers (`bg-base`, `bg-surface`)
-- **30%** — Text and supporting elements
-- **10%** — Brand orange. Never more.
-
-### Glow Usage
-Orange glow (box-shadow with `--color-brand-glow`) is used on:
-- Active primary buttons (subtle glow underneath)
-- Selected sidebar items
-- Live/active status indicators
-
-Never use glow on more than one element per viewport.
-
-### Gradient Rules
-The only approved gradient is:
 ```css
-background: linear-gradient(135deg, #FF5C00, #FF8C42);
-```
-Used for: Logo mark rendering, hero accent elements only.
+.stamp {
+  background: #FF5E2C;
+  color: #F5F2EE;
+  padding: 0 10px 4px;
+  display: inline-block;
+  line-height: inherit;
+}
 
-No purple. No blue-to-purple. No rainbow. Ever.
+.ticket-label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #FF5E2C;
+  background: rgba(255, 94, 44, 0.08);
+  border: 1px solid rgba(255, 94, 44, 0.2);
+  padding: 3px 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border-radius: 0;
+}
+
+.ticket-label::before {
+  content: '';
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  background: #FF5E2C;
+  flex-shrink: 0;
+}
+```
+
+### Section Eyebrow (orange ticket with square prefix)
+Used at top of every section to name the section.
 
 ---
 
-## Accessibility
+## 60 / 30 / 10 Rule (Light version)
 
-All text/background combinations meet WCAG AA (4.5:1 minimum):
-- `text-primary` on `bg-base`: ✅ 15.2:1
-- `text-secondary` on `bg-surface`: ✅ 6.1:1
-- `text-inverse` on `brand`: ✅ 4.8:1
+- **60%** — Warm off-white backgrounds (#F5F2EE, #EDEBE8, #FAFAF8)
+- **30%** — Near-black type and structural elements (#1A1916, #6B6B72)
+- **10%** — Brand orange (#FF5E2C) — stamps, active states, section eyebrows, CTAs
 
-Check contrast before using `text-tertiary` as anything other than metadata.
+---
+
+## Section Background Rhythm
+
+Sections alternate to create scroll depth without color noise:
+
+```
+NAV:                #F5F2EE (transparent until scroll, then solid)
+HERO:               #F5F2EE
+MARQUEE:            #EDEBE8
+THE LOOP:           #F5F2EE
+PROBLEM:            #EDEBE8
+FEATURES:           #F5F2EE
+TESTIMONIALS:       #EDEBE8
+COMPOUND:           #F5F2EE
+FINAL CTA:          #EDEBE8
+FOOTER:             #1A1916  ← ONLY dark element. Anchors the page.
+```
+
+The dark footer on a light page = a period at the end of a sentence.
+Everything else is light. The footer lands like a full stop.
