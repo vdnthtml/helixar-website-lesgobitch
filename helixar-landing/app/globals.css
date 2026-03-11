@@ -287,4 +287,12 @@ button {
     --content-pad: 24px;
     --section-pad: 64px;
   }
+
+  .auth-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .auth-left {
+    display: none !important;
+  }
 }

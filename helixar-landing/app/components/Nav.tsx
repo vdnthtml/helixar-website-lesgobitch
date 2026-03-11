@@ -84,12 +84,14 @@ export default function Nav() {
                 </nav>
 
                 {/* CTA */}
-                <button
-                    className="btn-primary"
-                    style={{ height: 40, padding: "0 20px", fontSize: 14 }}
-                >
-                    Add to Slack
-                </button>
+                <a href="/signup" style={{ textDecoration: 'none' }}>
+                    <button
+                        className="btn-primary"
+                        style={{ height: 40, padding: "0 20px", fontSize: 14 }}
+                    >
+                        Add to Slack
+                    </button>
+                </a>
             </div>
         </nav>
     );

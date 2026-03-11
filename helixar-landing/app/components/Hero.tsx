@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion'
 import InteractiveSlackCard from './InteractiveSlackCard'
 
-const ease = [0.16, 1, 0.3, 1]
+const ease: [number, number, number, number] = [0.16, 1, 0.3, 1]
 const lines = ['TYPE A', 'COMMAND.', 'GET A']
 const stampLine = 'COMPETITOR BRIEF.'
 
@@ -108,8 +108,12 @@ export default function Hero() {
                             alignItems: 'center',
                         }}
                     >
-                        <button className="btn-primary">Add to Slack — Free</button>
-                        <button className="btn-ghost">Watch it work →</button>
+                        <a href="/signup" style={{ textDecoration: 'none' }}>
+                            <button className="btn-primary">Add to Slack — Free</button>
+                        </a>
+                        <a href="#how-it-works" style={{ textDecoration: 'none' }}>
+                            <button className="btn-ghost">Watch it work →</button>
+                        </a>
                     </motion.div>
 
                     <motion.p

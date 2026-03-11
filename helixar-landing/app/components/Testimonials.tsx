@@ -16,7 +16,7 @@ export default function Testimonials() {
         },
         {
             quote: 'After 90 days, Helixar knew our vertical better than most junior marketers. The recommendations went from decent to genuinely surprising.',
-            name: 'Priya Nair',
+            name: 'Riya Nair',
             role: 'Growth Lead, Voltara Labs',
         },
     ]

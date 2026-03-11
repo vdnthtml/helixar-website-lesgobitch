@@ -47,8 +47,12 @@ export default function FinalCTA() {
                         marginTop: 40, display: 'flex', justifyContent: 'center',
                         gap: 20, alignItems: 'center',
                     }}>
-                        <button className="btn-primary">Add to Slack — Free</button>
-                        <button className="btn-ghost btn-ghost-dark">Book a 15-min demo →</button>
+                        <a href="/signup" style={{ textDecoration: 'none' }}>
+                            <button className="btn-primary">Add to Slack — Free</button>
+                        </a>
+                        <a href="mailto:hello@helixar.com" style={{ textDecoration: 'none' }}>
+                            <button className="btn-ghost btn-ghost-dark">Book a 15-min demo →</button>
+                        </a>
                     </div>
                 </FadeUp>
             </div>

@@ -112,7 +112,9 @@ export default function Pricing() {
                                 </p>
 
                                 <div style={{ marginTop: 'auto', paddingTop: 32 }}>
-                                    <button className={plan.ctaClass} style={{ width: '100%', justifyContent: 'center' }}>{plan.cta}</button>
+                                    <a href={plan.name === 'Enterprise' ? 'mailto:hello@helixar.com' : '/signup'} style={{ textDecoration: 'none' }}>
+                                        <button className={plan.ctaClass} style={{ width: '100%', justifyContent: 'center' }}>{plan.cta}</button>
+                                    </a>
                                 </div>
                             </div>
                         </FadeUp>
