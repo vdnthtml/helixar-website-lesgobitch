@@ -282,17 +282,65 @@ button {
   }
 }
 
+/* mobile-flex: hidden on desktop, shown on mobile */
+.mobile-flex { display: none; }
+
+/* ─── MOBILE UTILITIES ───────────────────────────────────── */
+
 @media (max-width: 768px) {
   :root {
     --content-pad: 24px;
     --section-pad: 64px;
   }
 
+  /* Layout */
+  .mobile-stack {
+    grid-template-columns: 1fr !important;
+    flex-direction: column !important;
+  }
+
+  .mobile-hide { display: none !important; }
+  .mobile-flex { display: flex !important; }
+  .mobile-center { text-align: center !important; }
+  .mobile-full { width: 100% !important; max-width: 100% !important; }
+
+  /* Padding */
+  .section-pad-mobile {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    padding-top: 64px !important;
+    padding-bottom: 64px !important;
+  }
+
+  /* Typography */
+  .mobile-headline-lg { font-size: clamp(52px, 14vw, 72px) !important; }
+  .mobile-headline-md { font-size: clamp(40px, 11vw, 56px) !important; }
+  .mobile-headline-sm { font-size: clamp(32px, 9vw, 44px) !important; }
+
+  /* Buttons */
+  .btn-primary, .btn-secondary {
+    height: 48px !important;
+    font-size: 15px !important;
+  }
+
+  /* Auth pages */
   .auth-grid {
     grid-template-columns: 1fr !important;
   }
 
   .auth-left {
     display: none !important;
+  }
+
+  /* HowItWorks row 2 — text first on mobile */
+  .feature-row-reversed .feature-text  { order: 0; }
+  .feature-row-reversed .feature-image { order: 1; }
+
+  /* Command blocks — prevent overflow */
+  .command-block {
+    max-width: 100%;
+    white-space: normal;
+    word-break: break-word;
+    overflow-wrap: anywhere;
   }
 }

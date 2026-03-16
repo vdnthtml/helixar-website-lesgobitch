@@ -18,12 +18,12 @@ export default function FinalCTA() {
             <div style={{
                 position: 'relative', zIndex: 1,
                 maxWidth: 680, margin: '0 auto',
-                padding: '120px var(--content-pad)',
+                padding: 'clamp(80px, 12vw, 120px) clamp(20px, 5vw, 48px)',
             }}>
                 <FadeUp delay={0}>
                     <div style={{
                         fontFamily: 'var(--font-display)',
-                        fontSize: 'clamp(64px,8vw,96px)',
+                        fontSize: 'clamp(48px,10vw,96px)',
                         lineHeight: 0.9,
                         color: 'var(--text-inverse)',
                     }}>
@@ -46,6 +46,7 @@ export default function FinalCTA() {
                     <div style={{
                         marginTop: 40, display: 'flex', justifyContent: 'center',
                         gap: 20, alignItems: 'center',
+                        flexWrap: 'wrap',
                     }}>
                         <a href="/signup" style={{ textDecoration: 'none' }}>
                             <button className="btn-primary">Add to Slack — Free</button>

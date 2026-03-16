@@ -30,7 +30,7 @@ export default function TheMath() {
                 position: 'relative', zIndex: 1,
                 maxWidth: 'var(--max-width)', margin: '0 auto',
                 paddingTop: 96, paddingBottom: 96,
-                paddingLeft: 'var(--content-pad)', paddingRight: 'var(--content-pad)',
+                paddingLeft: 'clamp(20px, 5vw, 48px)', paddingRight: 'clamp(20px, 5vw, 48px)',
             }}>
                 <FadeUp delay={0}>
                     <div className="ticket-label-dark">THE OLD WAY</div>
@@ -56,7 +56,7 @@ export default function TheMath() {
                 <div style={{
                     marginTop: 64, paddingTop: 64,
                     borderTop: '1px solid rgba(255,255,255,0.06)',
-                    display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 64,
+                    display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 'clamp(40px, 6vw, 64px)',
                 }}>
                     {/* LEFT */}
                     <FadeUp delay={0.1}>

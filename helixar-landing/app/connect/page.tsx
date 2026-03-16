@@ -16,7 +16,7 @@ export default function ConnectPage() {
       <div className="bg-word">CONNECT</div>
 
       <div style={{ position:'relative', zIndex:1, maxWidth:480,
-        textAlign:'center', padding:'0 24px', width:'100%' }}>
+        textAlign:'center', padding:'clamp(48px, 8vw, 96px) 24px', width:'100%' }}>
 
         {/* Logo */}
         <a href="/" style={{ display:'inline-flex', alignItems:'center', gap:4,

@@ -42,8 +42,7 @@ export default function HowItWorks() {
             {/* Header */}
             <div style={{
                 background: 'var(--bg-base)',
-                paddingTop: 96, paddingBottom: 72,
-                paddingLeft: 'var(--content-pad)', paddingRight: 'var(--content-pad)',
+                padding: 'clamp(48px, 8vw, 96px) clamp(20px, 5vw, 48px) clamp(36px, 6vw, 72px)',
                 maxWidth: 'var(--max-width)', margin: '0 auto',
                 position: 'relative', zIndex: 1,
             }}>
@@ -105,7 +104,7 @@ export default function HowItWorks() {
                             <p style={{
                                 marginTop: 12, fontFamily: 'var(--font-ui)',
                                 fontSize: 15, color: 'var(--text-body)',
-                                lineHeight: 1.65, maxWidth: 420,
+                                lineHeight: 1.65, maxWidth: '100%',
                             }}>{row.body}</p>
                         </FadeUp>
                     </div>
@@ -124,19 +123,28 @@ export default function HowItWorks() {
                     </FadeUp>
                 )
 
+                const isReversed = row.textSide === 'right'
+
                 return (
                     <div key={row.step} style={{
                         borderTop: '1px solid var(--border)', background: row.bg,
-                        paddingTop: 72, paddingBottom: 72,
-                        paddingLeft: 'var(--content-pad)', paddingRight: 'var(--content-pad)',
+                        padding: 'clamp(48px, 7vw, 72px) clamp(20px, 5vw, 48px)',
                     }}>
-                        <div style={{
-                            maxWidth: 'var(--max-width)', margin: '0 auto',
-                            display: 'grid',
-                            gridTemplateColumns: row.textSide === 'left' ? '45fr 55fr' : '55fr 45fr',
-                            gap: 64, alignItems: 'center',
-                        }}>
-                            {row.textSide === 'left' ? [textCol, screenshotCol] : [screenshotCol, textCol]}
+                        <div
+                            className={isReversed ? 'feature-row-reversed' : undefined}
+                            style={{
+                                maxWidth: 'var(--max-width)', margin: '0 auto',
+                                display: 'grid',
+                                gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+                                gap: 'clamp(32px, 5vw, 64px)', alignItems: 'center',
+                            }}
+                        >
+                            <div className={isReversed ? 'feature-text' : undefined} style={isReversed ? { order: 0 } : undefined}>
+                                {textCol}
+                            </div>
+                            <div className={isReversed ? 'feature-image' : undefined} style={isReversed ? { order: 1 } : undefined}>
+                                {screenshotCol}
+                            </div>
                         </div>
                     </div>
                 )

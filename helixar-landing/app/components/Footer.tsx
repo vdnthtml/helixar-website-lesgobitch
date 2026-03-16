@@ -21,14 +21,14 @@ export default function Footer() {
                 style={{
                     maxWidth: "var(--max-width)",
                     margin: "0 auto",
-                    padding: "64px var(--content-pad) 48px",
+                    padding: 'clamp(48px, 6vw, 64px) clamp(20px, 5vw, 48px) clamp(32px, 4vw, 48px)',
                 }}
             >
                 <div
                     style={{
                         display: "grid",
-                        gridTemplateColumns: "2fr 1fr 1fr 1fr",
-                        gap: 48,
+                        gridTemplateColumns: "repeat(auto-fit, minmax(140px, 1fr))",
+                        gap: 'clamp(24px, 5vw, 48px)',
                     }}
                 >
                     {/* Brand */}
@@ -111,6 +111,8 @@ export default function Footer() {
                         display: "flex",
                         justifyContent: "space-between",
                         alignItems: "center",
+                        flexWrap: "wrap",
+                        gap: 12,
                     }}
                 >
                     <span

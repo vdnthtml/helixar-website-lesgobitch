@@ -25,8 +25,8 @@ export default function Testimonials() {
         <section style={{ background: 'var(--bg-alt)' }}>
             <div style={{
                 maxWidth: 'var(--max-width)', margin: '0 auto',
-                paddingTop: 96, paddingBottom: 96,
-                paddingLeft: 'var(--content-pad)', paddingRight: 'var(--content-pad)',
+                paddingTop: 'clamp(64px, 8vw, 96px)', paddingBottom: 'clamp(64px, 8vw, 96px)',
+                paddingLeft: 'clamp(20px, 5vw, 48px)', paddingRight: 'clamp(20px, 5vw, 48px)',
             }}>
                 <FadeUp delay={0}>
                     <div className="ticket-label">RESULTS</div>
@@ -43,7 +43,7 @@ export default function Testimonials() {
 
                 <div style={{
                     marginTop: 64, display: 'grid',
-                    gridTemplateColumns: '1fr 1fr 1fr', gap: 40,
+                    gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 40,
                 }}>
                     {quotes.map((q, index) => (
                         <FadeUp key={q.name} delay={index * 0.1}>

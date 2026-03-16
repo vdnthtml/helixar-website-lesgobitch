@@ -119,7 +119,7 @@ export default function LoginPage() {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        padding: 48,
+        padding: 'clamp(32px, 6vw, 48px) 24px',
       }}>
         <div style={{ maxWidth:400, width:'100%' }}>
 

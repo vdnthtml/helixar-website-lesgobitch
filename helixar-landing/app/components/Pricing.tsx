@@ -31,8 +31,8 @@ export default function Pricing() {
         <section id="pricing" style={{ background: 'var(--bg-base)' }}>
             <div style={{
                 maxWidth: 'var(--max-width)', margin: '0 auto',
-                paddingTop: 96, paddingBottom: 96,
-                paddingLeft: 'var(--content-pad)', paddingRight: 'var(--content-pad)',
+                paddingTop: 'clamp(64px, 8vw, 96px)', paddingBottom: 'clamp(64px, 8vw, 96px)',
+                paddingLeft: 'clamp(20px, 5vw, 48px)', paddingRight: 'clamp(20px, 5vw, 48px)',
             }}>
                 <FadeUp delay={0}>
                     <div className="ticket-label">PRICING</div>
@@ -41,7 +41,7 @@ export default function Pricing() {
                 <FadeUp delay={0.08}>
                     <div style={{
                         marginTop: 16, fontFamily: 'var(--font-display)',
-                        fontSize: 'clamp(56px,6vw,80px)', lineHeight: 0.9,
+                        fontSize: 'clamp(40px,8vw,80px)', lineHeight: 0.9,
                         color: 'var(--text-primary)',
                     }}>
                         SIMPLE. <span className="stamp">TWO OPTIONS.</span>
@@ -64,7 +64,7 @@ export default function Pricing() {
                     </div>
                 </FadeUp>
 
-                <div style={{ marginTop: 48, display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 24 }}>
+                <div style={{ marginTop: 48, display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 24 }}>
                     {plans.map((plan, index) => (
                         <FadeUp key={plan.name} delay={index * 0.08}>
                             <div style={{

@@ -28,13 +28,10 @@ export default function Hero() {
                     zIndex: 1,
                     maxWidth: 'var(--max-width)',
                     margin: '0 auto',
-                    paddingTop: 80,
-                    paddingBottom: 80,
-                    paddingLeft: 'var(--content-pad)',
-                    paddingRight: 'var(--content-pad)',
+                    padding: 'clamp(100px, 15vw, 160px) 20px 60px',
                     display: 'grid',
-                    gridTemplateColumns: '1fr 1fr',
-                    gap: 64,
+                    gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+                    gap: 'clamp(32px, 5vw, 64px)',
                     alignItems: 'center',
                     width: '100%',
                 }}
@@ -54,7 +51,7 @@ export default function Hero() {
                     <div
                         style={{
                             fontFamily: 'var(--font-display)',
-                            fontSize: 'clamp(64px,8vw,96px)',
+                            fontSize: 'clamp(52px,12vw,96px)',
                             lineHeight: 0.92,
                             letterSpacing: '0.01em',
                             color: 'var(--text-primary)',
@@ -89,7 +86,7 @@ export default function Hero() {
                             fontSize: 16,
                             fontWeight: 400,
                             color: 'var(--text-body)',
-                            maxWidth: 400,
+                            maxWidth: '100%',
                             lineHeight: 1.6,
                         }}
                     >
@@ -106,6 +103,7 @@ export default function Hero() {
                             display: 'flex',
                             gap: 14,
                             alignItems: 'center',
+                            flexWrap: 'wrap',
                         }}
                     >
                         <a href="/signup" style={{ textDecoration: 'none' }}>
